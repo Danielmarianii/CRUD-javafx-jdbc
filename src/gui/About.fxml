@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox prefHeight="200.0" prefWidth="450.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/18">
+   <children>
+      <Label prefWidth="106.0" text="About CRUD">
+         <padding>
+            <Insets left="5.0" top="5.0" />
+         </padding>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label prefHeight="44.0" prefWidth="390.0" />
+      <Label prefHeight="29.0" prefWidth="430.0" text="CRUD JavaFX application  V1 " textAlignment="CENTER">
+         <padding>
+            <Insets left="160.0" />
+         </padding>
+         <font>
+            <Font size="14.0" />
+         </font>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </Label>
+      <Label prefHeight="31.0" prefWidth="409.0" text="Release: 2022/09/30">
+         <padding>
+            <Insets left="160.0" />
+         </padding>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</VBox>
