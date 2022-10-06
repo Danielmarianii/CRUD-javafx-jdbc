@@ -11,6 +11,8 @@ import java.util.List;
 import db.DB;
 import db.DbException;
 import db.DbIntegrityException;
+import gui.util.Alerts;
+import javafx.scene.control.Alert.AlertType;
 import model.dao.DepartmentDao;
 import model.entities.Department;
 
@@ -68,6 +70,7 @@ public class DepartmentDaoJDBC implements DepartmentDao {
 			return list;
 		}
 		catch (SQLException e) {
+			Alerts.showAlert("Database error", null, "Start database service and try again", AlertType.ERROR);
 			throw new DbException(e.getMessage());
 		}
 		finally {

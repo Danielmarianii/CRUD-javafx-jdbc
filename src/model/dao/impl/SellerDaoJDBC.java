@@ -13,6 +13,8 @@ import com.mysql.jdbc.Statement;
 
 import db.DB;
 import db.DbException;
+import gui.util.Alerts;
+import javafx.scene.control.Alert.AlertType;
 import model.dao.SellerDao;
 import model.entities.Department;
 import model.entities.Seller;
@@ -186,6 +188,7 @@ public class SellerDaoJDBC implements SellerDao {
 			return list;
 		}
 		catch (SQLException e) {
+			Alerts.showAlert("Database error", null, "Start database service and try again", AlertType.ERROR);
 			throw new DbException(e.getMessage());
 		}
 		finally {
