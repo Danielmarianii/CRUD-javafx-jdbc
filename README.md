@@ -1,43 +1,49 @@
-Programa desenvolvido com o Java na versao 11 LTS durante as aula do professor Nelio Alves.
-
-Para rodar esse programa é necessário o [Eclipse v4.11 ou superior]  e instalar o plug-in "e(fx)clipse" v3.4.1 ou superior  
-
-```
-Help -> Install new Software -> Work with:
- e buscar pelo Link " http://download.eclipse.org/efxclipse/updates-released/3.4.1/site/ "
- ```
+Programa desenvolvido com o Java na versao 11 LTS durante as aulas do professor Nelio Alves.
 
 
+No programa é possível cadastrar departamentos, pessoas, editar e deletar do banco de dados MySQL como na imagem abaixo.
 
-As bibliotecas [MySQLconnector v5.1 ou superior] Select Operating System -> Plataform independent -> download , e [JavaFX-Gluon v11.0.2]
+![image](https://github.com/Danielmarianii/CRUD-javafx-jdbc/blob/master/images/crud.png)
+
+Para rodar esse programa é necessário o [Eclipse v4.11 ou superior]  e instalar o plug-in "e(fx)clipse" v3.4.1 ou superior.  
+
+
+ Help -> Install new Software -> Work with:
+ e buscar pelo Link   ```" http://download.eclipse.org/efxclipse/updates-released/3.4.1/site/ " ```
+ 
+
+
+
+# Bibliotecas 
+[MySQLconnector v5.1 ou superior] Select Operating System -> Plataform independent -> download , e [JavaFX-Gluon v11.0.2]
 
 Criar uma User Library no Eclipse com o nome da biblioteca
-```
+
 Window -> Preferences -> Java -> Build Path -> User Libraries -> New
 Dê o nome da biblioteca
 Add External Jars (aponte para a pasta bin da biblioteca).
 
 Adicione as bibliotecas ao projeto.
-```
+
 Copiar o comando abaixo e colar no caminho abaixo, "adaptando o caminho da pasta"
 
-```
+```bash
  --module-path "C:\java-libs\javafx-sdk\lib" --add-modules=javafx.fxml,javafx.controls
  ```
 
-```
+
 Run As -> Run Configurations -> Arguments -> VM Arguments
-```
+
 
 Instale o [MySQL v8.0.12 ou superior] e defina o usuario: 'root' e senha: 'root' ou altere o arquivo "db.properties".
 
 Execute a query:
 
-```
+```mysql
 CREATE DATABASE coursejdbc;
 ```
 e depois a seguinte query
-```
+```mysql
 CREATE TABLE department (
   Id int(11) NOT NULL AUTO_INCREMENT,
   Name varchar(60) DEFAULT NULL,
